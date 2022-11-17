@@ -2,15 +2,16 @@
 // выведет все натуральные числа в промежутке от N до 1.
 // Выполнить с помощью рекурсии.
 
-Console.WriteLine("Здравствуйте! Введите число N");
-int numN = int.Parse(Console.ReadLine());
+int numN = 10;
+ToOneRecursion(numN);
 
 void ToOneRecursion(int number)
 {
-    if (number>0)
+    if (number>1)
     {
     Console.Write($"{number}, ");
     number--;
     ToOneRecursion(number);
     }
+    else Console.Write($"{1}.");
 }
