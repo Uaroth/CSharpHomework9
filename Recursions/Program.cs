@@ -22,17 +22,24 @@ Console.WriteLine();
 // найдёт сумму натуральных элементов в промежутке от M до N.
 
 Console.WriteLine("Задача 2:");
-int numM = 4;
+int numM2 = 4;
 int numN2 = 8;
-SumBetweenRecursion(numM, numN2);
 
-void SumBetweenRecursion(int number1, int number2)
+SumBetween(numM2, numN2);
+
+void SumBetween(int number1, int number2)
 {
-    for (int sum = number1 + number2; number2 > number1; number2--)
+    int sum = number1;
+    while (number2 > number1)
     {
-        SumBetweenRecursion(number1, number2);
-        Console.Write($"{sum}, ");
-    }
+        sum = sum + number2;
 
+        number2--;
+
+    }
+    Console.WriteLine($"{sum} ");
 
 }
+
+// Задача 3. Напишите программу вычисления функции Аккермана
+// с помощью рекурсии. Даны два неотрицательных числа m и n.
